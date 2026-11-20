@@ -1,0 +1,6 @@
+2026-11-20 20:28:22,631, INFO, This is an info message
+2026-11-20 20:28:22,631, WARNING, low disc space
+2026-11-20 20:28:22,632, ERROR, This is an error message
+2026-11-20 20:28:55,737, INFO, This is an info message
+2026-11-20 20:28:55,737, WARNING, low disc space
+2026-11-20 20:28:55,737, ERROR, This is an error message
