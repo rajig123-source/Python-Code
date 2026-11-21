@@ -47,3 +47,4 @@ def test_get_equipment_by_id(client, equipment_id, name, type, status, expected_
         data = response.get_json()
         assert 'error' in data
         assert data['error'] == "Equipment not found"
+
