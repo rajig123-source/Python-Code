@@ -1,0 +1,22 @@
+{
+    "101":{
+        "id":101,
+        "name":"Flight control unit",
+        "type": "FCU",
+        "status": "Operational"
+    },
+ 
+    "102":{
+        "id": 102,
+        "name": "Navigation System",
+        "type": "NS",
+        "status": "Operational"
+    },
+
+    "103":{
+        "id": 103,
+        "name": "Flight Management System",
+        "type": "FMS",
+        "status": "Operational"
+    }
+}
