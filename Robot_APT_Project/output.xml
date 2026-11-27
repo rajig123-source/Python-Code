@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5.1 (Python 3.12.10 on win32)" generated="2026-11-27T20:05:58.473071" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Get Equipment" source="C:\PythonProject\Robot_APT_Project\test_get_equipment.robot">
+<test id="s1-t1" name="TC001_Test Get All Equipment" line="11">
+<kw name="Create">
+<msg time="2026-11-27T20:05:58.727578" level="FAIL">No keyword with name 'Create' found. Did you mean:
+    BuiltIn.Create List</msg>
+<arg>API Session</arg>
+<status status="FAIL" start="2026-11-27T20:05:58.727578" elapsed="0.000000">No keyword with name 'Create' found. Did you mean:
+    BuiltIn.Create List</status>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<var>${response}</var>
+<arg>Equipment_API</arg>
+<arg>/api/equipment</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" start="2026-11-27T20:05:58.728575" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2026-11-27T20:05:58.728575" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-11-27T20:05:58.728575" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-11-27T20:05:58.725572" elapsed="0.003003">No keyword with name 'Create' found. Did you mean:
+    BuiltIn.Create List</status>
+</test>
+<test id="s1-t2" name="TC002_Test_GET_One" line="16">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-11-27T20:05:58.730779" level="INFO">Creating Session using : alias=Equipment_API, url=http://127.0.0.1:5001, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>Equipment_API</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-11-27T20:05:58.730779" elapsed="0.000918"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-11-27T20:05:58.742462" level="INFO">GET Request : url=http://127.0.0.1:5001/api/equipment/101 
+ path_url=/api/equipment/101 
+ headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-11-27T20:05:58.742462" level="INFO">GET Response : url=http://127.0.0.1:5001/api/equipment/101 
+ status=200, reason=OK 
+ headers={'Server': 'Werkzeug/3.1.9 Python/3.12.10', 'Date': 'Fri, 27 Nov 2026 07:05:58 GMT', 'Content-Type': 'application/json', 'Content-Length': '78', 'Connection': 'close'} 
+ body=[{"id":101,"name":"Flight control unit","status":"Operational","type":"FCU"}]
+ 
+ </msg>
+<msg time="2026-11-27T20:05:58.742462" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>Equipment_API</arg>
+<arg>/api/equipment/101</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-11-27T20:05:58.732439" elapsed="0.010023"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-11-27T20:05:58.744455" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-11-27T20:05:58.743455" elapsed="0.001000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-11-27T20:05:58.745455" level="INFO">${data} = [{'id': 101, 'name': 'Flight control unit', 'status': 'Operational', 'type': 'FCU'}]</msg>
+<var>${data}</var>
+<arg>${response.json()}</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-11-27T20:05:58.744455" elapsed="0.001000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2026-11-27T20:05:58.746465" level="FAIL">List '${data}' used with invalid index 'name'. To use '[name]' as a literal value, it needs to be escaped like '\[name]'.</msg>
+<arg>${data}[name]</arg>
+<arg>Flight control unit</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2026-11-27T20:05:58.745455" elapsed="0.001010">List '${data}' used with invalid index 'name'. To use '[name]' as a literal value, it needs to be escaped like '\[name]'.</status>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${data}[type]</arg>
+<arg>FCU</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2026-11-27T20:05:58.746465" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${data}[status]</arg>
+<arg>Operational</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" start="2026-11-27T20:05:58.747458" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>All Equipment Details: ${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-11-27T20:05:58.747458" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-11-27T20:05:58.729574" elapsed="0.017884">List '${data}' used with invalid index 'name'. To use '[name]' as a literal value, it needs to be escaped like '\[name]'.</status>
+</test>
+<status status="FAIL" start="2026-11-27T20:05:58.475066" elapsed="0.273388"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Get Equipment" id="s1" pass="0" fail="2" skip="0">Test Get Equipment</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
