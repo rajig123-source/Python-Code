@@ -17,14 +17,18 @@ pipeline{
     }
     stage('Start Flask Application'}{
       steps{
-        bat 'start "FlaskApp" /B puthon app.py'
+        bat '''
+          cd /d "%WORKSPACE%\\Automation Simulator"
+        start "FlaskApp" /B python app.py'''
       }
     }
     stage('Execcute API Test'){
       steps {
-        bat 'python -m  robot test_2.robot'
+        bat'''
+          cd /d "%WORKSPACE%\\Robot_APT_Project\\tests\\test_2.robot"
+        python -m  robot test_2.robot'''
         )
       }
-
-          
+    }
+}
   
