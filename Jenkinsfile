@@ -10,7 +10,7 @@ pipeline{
         checkout scm
       }
     }
-    stage('Install Dependencies'}{
+    stage('Install Dependencies'){
       steps{
         but 'python -m pip install -r Requirement.txt'
       }
