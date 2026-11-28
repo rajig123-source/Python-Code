@@ -17,12 +17,12 @@ pipeline{
     }
     stage('Start Flask Application'}{
       steps{
-        bat '''start "FlaskApp" /B puthon app.py'''
+        bat 'start "FlaskApp" /B puthon app.py'
       }
     }
     stage('Execcute API Test'){
       steps {
-        bat '''python -m  robot test_2.robot'''
+        bat 'python -m  robot test_2.robot'
         )
       }
 
