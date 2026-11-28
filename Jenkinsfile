@@ -27,7 +27,7 @@ pipeline{
         bat'''
           cd /d "%WORKSPACE%\\Robot_APT_Project\\tests\\test_2.robot"
         python -m  robot test_2.robot'''
-        )
+      }
       }
     }
 }
