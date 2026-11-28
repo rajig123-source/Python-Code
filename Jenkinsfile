@@ -15,7 +15,7 @@ pipeline{
         but 'python -m pip install -r Requirement.txt'
       }
     }
-    stage('Start Flask Application'}{
+    stage('Start Flask Application'){
       steps{
         bat '''
           cd /d "%WORKSPACE%\\Automation Simulator"
