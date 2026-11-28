@@ -12,7 +12,7 @@ pipeline{
     }
     stage('Install Dependencies'}{
       steps{
-        but 'python -m pip install -r requirements.txt'
+        but 'python -m pip install -r Requirement.txt'
       }
     }
     stage('Start Flask Application'}{
