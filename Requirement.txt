@@ -1,2 +1,4 @@
 robotframework
 robotframework-requests
+flask
+requests

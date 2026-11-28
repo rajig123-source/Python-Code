@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5.1 (Python 3.12.10 on win32)" generated="2026-11-28T00:16:04.225140" rpa="false" schemaversion="5">
+<robot generator="Robot 7.5.1 (Python 3.12.10 on win32)" generated="2026-11-28T19:07:50.057876" rpa="false" schemaversion="5">
 <suite id="s1" name="Login" source="C:\PythonProject\Robot_GUI_Project\Testcases\login.robot">
 <test id="s1-t1" name="verify login Functionality" line="9">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-11-28T00:16:04.935653" level="INFO">Opening browser 'Chrome' to base url 'http://www.amazon.in/'.</msg>
+<msg time="2026-11-28T19:07:50.685510" level="INFO">Opening browser 'Chrome' to base url 'http://www.amazon.in/'.</msg>
 <arg>${URL}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-11-28T00:16:04.935653" elapsed="3.640997"/>
+<status status="PASS" start="2026-11-28T19:07:50.684513" elapsed="5.013928"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-11-28T00:16:08.577654" elapsed="0.030994"/>
+<status status="PASS" start="2026-11-28T19:07:55.699451" elapsed="0.026146"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-28T00:16:18.610334" level="INFO">Slept 10 seconds.</msg>
+<msg time="2026-11-28T19:08:05.726868" level="INFO">Slept 10 seconds.</msg>
 <arg>10s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-28T00:16:08.608648" elapsed="10.001686"/>
+<status status="PASS" start="2026-11-28T19:07:55.725597" elapsed="10.001271"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-28T00:16:18.611342" level="INFO">Typing text 'laptop' into text field 'id=twotabsearchtextbox'.</msg>
+<msg time="2026-11-28T19:08:05.727868" level="INFO">Typing text 'laptop' into text field 'id=twotabsearchtextbox'.</msg>
 <arg>id=twotabsearchtextbox</arg>
 <arg>laptop</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-28T00:16:18.610334" elapsed="0.136268"/>
+<status status="PASS" start="2026-11-28T19:08:05.726868" elapsed="0.146624"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-28T00:16:28.748648" level="INFO">Slept 10 seconds.</msg>
+<msg time="2026-11-28T19:08:15.875313" level="INFO">Slept 10 seconds.</msg>
 <arg>10s</arg>
 <doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-28T00:16:18.746602" elapsed="10.002046"/>
+<status status="PASS" start="2026-11-28T19:08:05.873492" elapsed="10.001821"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-28T00:16:28.749652" level="INFO">Clicking element 'id=nav-search-submit-button'.</msg>
+<msg time="2026-11-28T19:08:15.876310" level="INFO">Clicking element 'id=nav-search-submit-button'.</msg>
 <arg>id=nav-search-submit-button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-28T00:16:28.748648" elapsed="3.561181"/>
+<status status="PASS" start="2026-11-28T19:08:15.875313" elapsed="3.661914"/>
 </kw>
-<status status="PASS" start="2026-11-28T00:16:04.935653" elapsed="27.374176"/>
+<status status="PASS" start="2026-11-28T19:07:50.682515" elapsed="28.855720"/>
 </test>
-<status status="PASS" start="2026-11-28T00:16:04.225140" elapsed="28.085689"/>
+<status status="PASS" start="2026-11-28T19:07:50.059877" elapsed="29.479354"/>
 </suite>
 <statistics>
 <total>
